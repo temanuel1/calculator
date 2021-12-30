@@ -12,8 +12,13 @@ body {
   background-color: rgb(102, 99, 99);
   width: 400px;
   border-radius: 16px;
+  margin-top: 5px;
 }
 
 .row {
+  display: flex;
+}
+
+.bottom-row{
   display: flex;
 }

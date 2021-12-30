@@ -17,6 +17,10 @@ const App = () => {
     setText((text) => [...text, val + ""])
   }
 
+  const addSqrt = (val) => {
+    setText((text) => [...text, val + "("])
+  }
+
   const calculateResult = () => {
     const input = text.join("")
     setResult(Math.round(1e12 * math.evaluate(input)) / 1e12)
@@ -28,38 +32,45 @@ const App = () => {
     setResult("")
   }
 
-  const operationColor = "#6883BC"
-  const numKeyColor = "#79A7D3"
+  const color = "#79A7D3"
   
   return (
     <div className="App">
       <div className = 'calc-wrapper'>
         < Input text = {text} result = {result}/>
         <div className = 'row'>
-          <Button symbol="7" color={numKeyColor} handleClick={addToText}/>
-          <Button symbol="8" color={numKeyColor} handleClick={addToText}/>
-          <Button symbol="9" color={numKeyColor} handleClick={addToText}/>
-          <Button symbol="/" color={operationColor} handleClick={addToText}/>
+          <Button symbol="(" color={color} handleClick={addToText} />
+          <Button symbol=")" color={color} handleClick={addToText} />
+          <Button symbol="sqrt" color={color} handleClick={addSqrt} />
+          <Button symbol="^" color={color} handleClick={addToText} />
         </div>
         <div className = 'row'>
-          <Button symbol="4" color={numKeyColor} handleClick={addToText}/>
-          <Button symbol="5" color={numKeyColor} handleClick={addToText}/>
-          <Button symbol="6" color={numKeyColor} handleClick={addToText}/>
-          <Button symbol="*" color = {operationColor} handleClick={addToText}/>
+          <Button symbol="7" color={color} handleClick={addToText}/>
+          <Button symbol="8" color={color} handleClick={addToText}/>
+          <Button symbol="9" color={color} handleClick={addToText}/>
+          <Button symbol="/" color={color} handleClick={addToText}/>
         </div>
         <div className = 'row'>
-          <Button symbol="1" color={numKeyColor} handleClick={addToText}/>
-          <Button symbol="2" color={numKeyColor} handleClick={addToText}/>
-          <Button symbol="3" color={numKeyColor} handleClick={addToText}/>
-          <Button symbol="+" color = {operationColor} handleClick={addToText}/>
+          <Button symbol="4" color={color} handleClick={addToText}/>
+          <Button symbol="5" color={color} handleClick={addToText}/>
+          <Button symbol="6" color={color} handleClick={addToText}/>
+          <Button symbol="*" color = {color} handleClick={addToText}/>
         </div>
         <div className = 'row'>
-          <Button symbol="0" color={numKeyColor} handleClick={addToText}/>
-          <Button symbol="." color={numKeyColor} handleClick={addToText}/>
-          <Button symbol="=" color={numKeyColor} handleClick={calculateResult}/>
-          <Button symbol="-" color = {operationColor} handleClick={addToText}/>
+          <Button symbol="1" color={color} handleClick={addToText}/>
+          <Button symbol="2" color={color} handleClick={addToText}/>
+          <Button symbol="3" color={color} handleClick={addToText}/>
+          <Button symbol="+" color = {color} handleClick={addToText}/>
         </div>
+        <div className = 'row'>
+          <Button symbol="0" color={color} handleClick={addToText}/>
+          <Button symbol="." color={color} handleClick={addToText}/>
+          <Button symbol="=" color={color} handleClick={calculateResult}/>
+          <Button symbol="-" color = {color} handleClick={addToText}/>
+        </div>
+        <div className = "bottom-row">
         <Button symbol="Clear" color = "#8A307F" handleClick={resetInput}/>
+        </div>
       </div>
     </div>
   );
