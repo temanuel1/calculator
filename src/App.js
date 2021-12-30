@@ -1,9 +1,5 @@
 import { useState } from 'react'
-
-//https://www.youtube.com/watch?v=n_cKSILMzmM
-
 import * as math from 'mathjs'
-
 import './App.css';
 import Button from './components/Button'
 import Input from './components/Input'
