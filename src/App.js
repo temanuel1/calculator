@@ -18,7 +18,7 @@ const App = () => {
   }
 
   const addPi = () => {
-    setText((text) => [...text, "pi" + ""])
+    setText((text) => [...text, "pi"])
   }
 
   const calculateResult = () => {
