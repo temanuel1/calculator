@@ -28,36 +28,38 @@ const App = () => {
     setResult("")
   }
 
-  const buttonColor = "#f2a33c"
+  const operationColor = "#6883BC"
+  const numKeyColor = "#79A7D3"
+  
   return (
     <div className="App">
       <div className = 'calc-wrapper'>
         < Input text = {text} result = {result}/>
         <div className = 'row'>
-          <Button symbol="7" handleClick={addToText}/>
-          <Button symbol="8" handleClick={addToText}/>
-          <Button symbol="9" handleClick={addToText}/>
-          <Button symbol="/" color={buttonColor} handleClick={addToText}/>
+          <Button symbol="7" color={numKeyColor} handleClick={addToText}/>
+          <Button symbol="8" color={numKeyColor} handleClick={addToText}/>
+          <Button symbol="9" color={numKeyColor} handleClick={addToText}/>
+          <Button symbol="/" color={operationColor} handleClick={addToText}/>
         </div>
         <div className = 'row'>
-          <Button symbol="4" handleClick={addToText}/>
-          <Button symbol="5" handleClick={addToText}/>
-          <Button symbol="6" handleClick={addToText}/>
-          <Button symbol="*" color = {buttonColor} handleClick={addToText}/>
+          <Button symbol="4" color={numKeyColor} handleClick={addToText}/>
+          <Button symbol="5" color={numKeyColor} handleClick={addToText}/>
+          <Button symbol="6" color={numKeyColor} handleClick={addToText}/>
+          <Button symbol="*" color = {operationColor} handleClick={addToText}/>
         </div>
         <div className = 'row'>
-          <Button symbol="1" handleClick={addToText}/>
-          <Button symbol="2" handleClick={addToText}/>
-          <Button symbol="3" handleClick={addToText}/>
-          <Button symbol="+" color = {buttonColor} handleClick={addToText}/>
+          <Button symbol="1" color={numKeyColor} handleClick={addToText}/>
+          <Button symbol="2" color={numKeyColor} handleClick={addToText}/>
+          <Button symbol="3" color={numKeyColor} handleClick={addToText}/>
+          <Button symbol="+" color = {operationColor} handleClick={addToText}/>
         </div>
         <div className = 'row'>
-          <Button symbol="0" handleClick={addToText}/>
-          <Button symbol="." handleClick={addToText}/>
-          <Button symbol="=" handleClick={calculateResult}/>
-          <Button symbol="-" color = {buttonColor} handleClick={addToText}/>
+          <Button symbol="0" color={numKeyColor} handleClick={addToText}/>
+          <Button symbol="." color={numKeyColor} handleClick={addToText}/>
+          <Button symbol="=" color={numKeyColor} handleClick={calculateResult}/>
+          <Button symbol="-" color = {operationColor} handleClick={addToText}/>
         </div>
-        <Button symbol="Clear" color = "red" handleClick={resetInput}/>
+        <Button symbol="Clear" color = "#8A307F" handleClick={resetInput}/>
       </div>
     </div>
   );

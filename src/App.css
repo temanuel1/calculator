@@ -9,7 +9,7 @@ body {
 }
 
 .calc-wrapper {
-  background-color: white;
+  background-color: rgb(102, 99, 99);
   width: 400px;
   border-radius: 16px;
 }
