@@ -21,6 +21,10 @@ const App = () => {
     setText((text) => [...text, val + "("])
   }
 
+  const addPi = () => {
+    setText((text) => [...text, "pi" + ""])
+  }
+
   const calculateResult = () => {
     const input = text.join("")
     setResult(Math.round(1e12 * math.evaluate(input)) / 1e12)
@@ -68,13 +72,14 @@ const App = () => {
         </div>
         <div className = 'row'>
           <Button className = "button" symbol="log" color={color} handleClick={addPar} />
+          <Button className = "button" symbol="π" color={color} handleClick={addPi} />
           <Button className = "button" symbol="0" color={color} handleClick={addToText}/>
-          <Button className = "button" symbol="." color={color} handleClick={addToText}/>
-          <Button className = "button" symbol="=" color={color} handleClick={calculateResult}/>
+          <Button className = "button" symbol="." color={color} handleClick={addToText}/>          
           <Button className = "button" symbol="-" color = {color} handleClick={addToText}/>
         </div>
         <div className = "bottom-row">
         <Button className = "button" symbol="Clear" color = "#8A307F" handleClick={resetInput}/>
+        <Button className = "button" symbol="=" color="#6883BC" handleClick={calculateResult}/>
         </div>
       </div>
     </div>
