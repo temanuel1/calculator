@@ -10,7 +10,7 @@ body {
 
 .calc-wrapper {
   background-color: rgb(102, 99, 99);
-  width: 400px;
+  width: 500px;
   border-radius: 16px;
   margin-top: 5px;
 }
@@ -22,3 +22,4 @@ body {
 .bottom-row{
   display: flex;
 }
+
