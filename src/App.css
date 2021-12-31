@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(124, 111, 111);
+  background-color: rgb(209, 203, 203);
 }
 
 .App {
@@ -9,7 +9,7 @@ body {
 }
 
 .calc-wrapper {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(46, 39, 39);
   width: 500px;
   border-radius: 16px;
   margin-top: 5px;

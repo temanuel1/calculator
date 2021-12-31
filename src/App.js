@@ -32,11 +32,11 @@ const App = () => {
     setResult("")
   }
 
-  const color1 = "#ff8800"
-  const color2 = '#ff9721'
-  const color3 = '#ffa238'
-  const color4 = '#ffac4d'
-  const color5 = '#ffba6b'
+  const color1 = "#1e008c"
+  const color2 = '#2d0ca8'
+  const color3 = '#3e1ac7'
+  const color4 = '#5631e0'
+  const color5 = '#7854ff'
   
   return (
     <div className="App">
@@ -78,8 +78,8 @@ const App = () => {
           <Button className = "button" symbol="-" color = {color5} handleClick={addToText}/>
         </div>
         <div className = "bottom-row">
-        <Button className = "button" symbol="Clear" color = "#ffcd94" handleClick={resetInput}/>
-        <Button className = "button" symbol="=" color="#ffcd94" handleClick={calculateResult}/>
+        <Button className = "button" symbol="Clear" color = "#9275ff" handleClick={resetInput}/>
+        <Button className = "button" symbol="=" color="#9275ff" handleClick={calculateResult}/>
         </div>
       </div>
     </div>
